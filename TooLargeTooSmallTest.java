@@ -8,8 +8,8 @@ import org.junit.Test;
 /**
  * The test class TooLargeTooSmallTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  Giles Bradford
+ * @version 1.0 5-Feb-2020
  */
 public class TooLargeTooSmallTest
 {
@@ -46,24 +46,33 @@ public class TooLargeTooSmallTest
         TooLargeTooSmall tooLarge1 = new TooLargeTooSmall(5);
         assertEquals(Integer.valueOf(0), tooLarge1.guess(5));
     }
-    
+
     @Test
     public void TestRun2()
     {
         TooLargeTooSmall tooLarge1 = new TooLargeTooSmall(6);
         assertEquals(Integer.valueOf(-1), tooLarge1.guess(4));
     }
-    
+
     @Test
     public void TestRun3()
     {
         TooLargeTooSmall tooLarge1 = new TooLargeTooSmall(2);
-        
+
         assertEquals(Integer.valueOf(-1), tooLarge1.guess(1));
         assertEquals(Integer.valueOf(0), tooLarge1.guess(2));
         assertEquals(Integer.valueOf(1), tooLarge1.guess(3));
     }
-    
-   
-}
 
+    @Test
+    public void TestRun4()
+    {
+        TooLargeTooSmall tooLarge1 = new TooLargeTooSmall(8);
+
+        assertEquals(Integer.valueOf(-1), tooLarge1.guess(4));
+        assertEquals(Integer.valueOf(0), tooLarge1.guess(8));
+        assertEquals(Integer.valueOf(1), tooLarge1.guess(10));
+    }
+
+
+}
